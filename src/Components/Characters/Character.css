@@ -1,0 +1,11 @@
+.char {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: beige;
+    width: 32%;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    box-sizing: border-box;
+}
