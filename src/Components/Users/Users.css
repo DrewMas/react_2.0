@@ -1,0 +1,7 @@
+.allUsers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    background: #f1eee8;
+}
+
