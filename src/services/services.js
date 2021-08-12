@@ -6,12 +6,16 @@ let config = {
 
 let axiosInstance = axios.create(config);
 
-const getUsers = ()=>{
+const getUsers = () => {
     return axiosInstance.get('users');
 };
 
-const getUsersPost = (id) =>{
+const getUsersPost = (id) => {
     return axiosInstance.get(`users/${id}/posts`)
 }
 
-export {getUsers, getUsersPost}
+const getPostComments = (id) => {
+    return axiosInstance.get(`posts/${id}/comments`)
+}
+
+export {getUsers, getUsersPost, getPostComments}

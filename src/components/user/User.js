@@ -1,22 +1,24 @@
 import {useEffect, useState} from "react";
 import {getUsersPost} from "../../services/services";
+import Posts from "../posts/Posts";
+import "./User.css"
 
 export default function User({item: {id, name, username}}) {
 
-    // const [posts, setPosts] = useState([]);
-    //
-    // useEffect(()=> {
-    //     getUsersPost(id).then(({data}) => {
-    //         setPosts([...data]);
-    //         console.log(data);
-    //     })
-    // },[]);
+    let [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        getUsersPost(id).then(({data}) => {
+            setPosts([...data]);
+        })
+    }, [id]);
 
     return (
-        <div>
-            <div>{id}. {name}</div>
-            <p>{username}</p>
-
+        <div className={'singleUser'}>
+            <h2>{id}. {name} <br/>
+                Username - {username}
+            </h2>
+            <Posts posts={posts}/>
 
         </div>
     );
