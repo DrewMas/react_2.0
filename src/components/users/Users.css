@@ -1,0 +1,18 @@
+.wrap{
+    display: flex;
+}
+
+.allUsers{
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    background: cornsilk;
+    text-align: center;
+}
+
+.userDetails{
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    background: lavender;
+}
