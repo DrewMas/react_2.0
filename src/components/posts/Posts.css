@@ -1,0 +1,16 @@
+.wrap{
+    margin: 10px;
+    display: flex;
+}
+
+.posts{
+    background: beige;
+    width: 50%;
+    padding: 10px;
+}
+
+.postDetails {
+    padding: 10px;
+    background: #f5e9d8;
+    width: 50%;
+}
