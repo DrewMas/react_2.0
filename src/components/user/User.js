@@ -3,7 +3,7 @@ import {getUsersPost} from "../../services/services";
 import Posts from "../posts/Posts";
 import "./User.css"
 
-export default function User({item: {id, name, username}}) {
+export default function User({user: {id, name, username}}) {
 
     let [posts, setPosts] = useState([]);
 
