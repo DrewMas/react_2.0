@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {getUsers} from "../../services/api.services";
 import User from "../user/User";
 import './Users.css'
+import ChosenUserDetails from "../chosenUserDetails/ChosenUserDetails";
 
 export default function Users() {
 
@@ -29,7 +30,7 @@ export default function Users() {
                 }
             </div>
             {
-                user && <div className={'userDetails'}>{JSON.stringify(user)}</div>
+                user && <div className={'userDetails'}><ChosenUserDetails user={user}/></div>
             }
         </div>
     );
