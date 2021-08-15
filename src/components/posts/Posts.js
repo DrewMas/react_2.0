@@ -19,7 +19,7 @@ export default function Posts() {
     }
 
     return (
-        <div className={'wrap'}>
+        <div className={'postsWrap'}>
             <div className={'posts'}>
                 {
                     posts.map(value => <Post

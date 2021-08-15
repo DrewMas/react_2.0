@@ -1,12 +1,16 @@
 let url = 'https://jsonplaceholder.typicode.com/';
 
-const getPosts = () =>{
+const getPosts = () => {
     return fetch(url + `posts`)
         .then(value => value.json())
 }
 
-const getPostDetails = (id) => {
-    return fetch(`url + ${id} + /comments`)
+
+
+const getComments = () => {
+    return fetch(url + `comments`)
+        .then(value => value.json())
 }
 
-export {getPosts,getPostDetails}
+
+export {getPosts, getComments}

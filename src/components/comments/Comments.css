@@ -1,0 +1,17 @@
+.commentsWrap{
+    margin: 10px;
+    display: flex;
+    width: 50%;
+}
+
+.comments{
+    width: 50%;
+    padding: 10px;
+    background: #e3e3aa;
+}
+
+.commentDetails{
+    width: 50%;
+    padding: 10px;
+background: #d9eac9;
+}
