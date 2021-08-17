@@ -1,0 +1,19 @@
+.wrap{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: cornsilk;
+}
