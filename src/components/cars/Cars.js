@@ -14,6 +14,7 @@ export default function Cars() {
     return (
         <div className={'wrap'}>
             <div className={'form'}>
+                <h1>Add car info</h1>
                 <CarPostingForm/>
             </div>
             <div className={'cars'}>

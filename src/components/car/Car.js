@@ -6,7 +6,7 @@ export default function Car({item: {id, model, price, year}}) {
         <div className={'car'}>
             <h3>{id}. {model}</h3>
             <p>
-                Price is -{price} <br/>
+                Price is - {price} <br/>
                 Year is {year}
             </p>
         </div>
