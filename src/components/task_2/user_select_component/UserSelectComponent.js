@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getUsers} from "../../services/api.services";
+import {getUsers} from "../../../services/api.services.task2";
 
 export default function UserSelectComponent({getPosts}) {
 
@@ -15,6 +15,7 @@ export default function UserSelectComponent({getPosts}) {
 
     return (
         <div>
+            <h2>Choose a user</h2>
             <select onChange={select}>
                 {
                     users.map(value => <option value={value.id} key={value.id}>{value.id}.{value.name}</option>)
