@@ -1,9 +1,9 @@
 import './Car.css'
-import {deleteCar} from "../../../services/api.services.task1";
+import {deleteCar, editCar} from "../../../services/api.services.task1";
 
-export default function Car({item:{id, model, price, year}}) {
+export default function Car({item: {id, model, price, year}}) {
 
-    const carDelete = () =>{
+    const carDelete = () => {
         deleteCar(id);
     }
 
