@@ -1,0 +1,12 @@
+.homeTitle {
+    text-align: center;
+}
+
+.homeContent {
+    text-align: justify;
+    padding: 10px;
+    background: #fcfcf0;
+    border: 2px solid rosybrown;
+    margin: 10px;
+}
+

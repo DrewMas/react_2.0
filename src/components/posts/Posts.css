@@ -1,0 +1,22 @@
+.postsTitle {
+    text-align: center;
+}
+
+.singePost{
+    background: #fcfcf0;
+    border: 2px solid rosybrown;
+    margin: 10px;
+    text-align: center;
+    width: 18%;
+    padding: 5px;
+}
+
+.postBackgroundColor{
+    background: #fcfcf0;
+}
+
+.postsPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

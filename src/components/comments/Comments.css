@@ -1,0 +1,22 @@
+.commentsTitle{
+    text-align: center;
+}
+
+.singleComment{
+    background: #fcfcf0;
+    border: 2px solid rosybrown;
+    margin: 10px;
+    text-align: center;
+    width: 18%;
+    padding: 5px;
+
+}
+
+.commentBackgroundColor {
+    background: #fcfcf0;
+}
+.commentsPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
