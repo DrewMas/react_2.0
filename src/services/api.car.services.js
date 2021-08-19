@@ -25,7 +25,7 @@ const deleteCar = (id) => {
     })
 }
 
-const editCar = (car, id) => {
+const editCar = (id, car) => {
     return fetch(url + `/${id}`, {
         method: 'PUT',
         body: JSON.stringify(car),
