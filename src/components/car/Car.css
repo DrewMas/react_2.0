@@ -1,0 +1,10 @@
+.singleCar {
+    width: 275px;
+    background: rgba(168,178,165, .1);
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,15 @@
+.homeComponent {
+    margin: 10px;
+    text-align: justify;
+    background: rgba(168,178,165, .3);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+p{
+    padding: 10px;
+}
