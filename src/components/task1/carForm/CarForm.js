@@ -24,19 +24,19 @@ export default function CarForm() {
         setFormState({...formState, [e.target.name]: e.target.value});
     }
 
-    const carEdit = (id, model, price, year)=>{
-        setFormState({model: model, price: price, year: year, id:id});
+    const carEdit = (id, model, price, year) => {
+        setFormState({model: model, price: price, year: year, id: id});
     }
 
-    const update = ()=>{
+    const update = () => {
         editCar(formState.id, formState)
         setFormState({model: '', price: '', year: ''})
     }
 
     return (
-        <div className={'carForm'}>
-            <h2>Add a car</h2>
-            <div>
+        <div>
+            <div className={'carForm'}>
+                <h2>Add a car</h2>
                 <form onSubmit={save}>
                     <input type="text" name={'model'}
                            placeholder={'Enter a model'} value={formState.model}
@@ -57,7 +57,6 @@ export default function CarForm() {
             <div>
                 <Cars cars={cars} edit={carEdit}/>
             </div>
-
         </div>
     );
 }
