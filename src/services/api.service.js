@@ -1,10 +1,10 @@
 const url = 'http://195.72.146.25/api/v1/cars';
 
-const getCars = () =>{
+const getCars = () => {
     return fetch(url).then(value => value.json())
 }
 
-const createCar = (car) =>{
+const createCar = (car) => {
     return fetch(url, {
         method: "POST",
         body: JSON.stringify(car),
@@ -29,7 +29,7 @@ const updateCar = (id, car) => {
 
 }
 
-const getCarById = (id) =>{
+const getCarById = (id) => {
     return fetch(url + `/${id}`).then(value => value.json())
 }
 

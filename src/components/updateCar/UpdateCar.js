@@ -11,9 +11,9 @@ export default function UpdateCar({cars}) {
     }
 
     const selectF = (e) => {
-        getCarById(e.target.value).then(value => setValue({...value}))
-        // let find = cars.find(value => value.id === +e.target.value);
-        // setValue(find);
+        // getCarById(e.target.value).then(value => setValue({...value}))
+        let find = cars.find(value => value.id === +e.target.value);
+        find? setValue(find): setValue({model: '', price: '', year: ''})
     }
 
     const carUpdate = (e) => {
@@ -29,6 +29,7 @@ export default function UpdateCar({cars}) {
                 <div>
                     <form onChange={selectF}>
                         <select className={'select'}>
+                            <option>Choose a car</option>
                             {
                                 cars.map(value => <option key={value.id}
                                                           value={value.id}>{value.id}.{value.model}</option>)
