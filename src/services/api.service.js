@@ -29,4 +29,8 @@ const updateCar = (id, car) => {
 
 }
 
-export {getCars, createCar, updateCar}
+const getCarById = (id) =>{
+    return fetch(url + `/${id}`).then(value => value.json())
+}
+
+export {getCars, createCar, updateCar, getCarById}

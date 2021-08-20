@@ -1,7 +1,7 @@
 .homeComponent {
     margin: 10px;
     text-align: justify;
-    background: rgba(168,178,165, .3);
+    background: rgba(168,178,165, .1);
     display: flex;
     flex-direction: column;
 }

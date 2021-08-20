@@ -1,5 +1,6 @@
 import './UpdateCar.css'
 import {useState} from "react";
+import {getCarById, updateCar} from "../../services/api.service";
 
 export default function UpdateCar({cars}) {
 
@@ -10,9 +11,15 @@ export default function UpdateCar({cars}) {
     }
 
     const selectF = (e) => {
-        console.log(e.target.value);
-        // let find = cars.find(value=> e.target.value === cars.id);
-        // setValue(find)
+        getCarById(e.target.value).then(value => setValue({...value}))
+        // let find = cars.find(value => value.id === +e.target.value);
+        // setValue(find);
+    }
+
+    const carUpdate = (e) => {
+        e.preventDefault();
+        updateCar(value.id, value);
+        setValue({model: '', price: '', year: ''});
     }
 
     return (
@@ -20,14 +27,17 @@ export default function UpdateCar({cars}) {
             <h2>Update car</h2>
             <div className={'forms'}>
                 <div>
-                    <select className={'select'} onChange={selectF}>
-                        {
-                            cars.map(value => <option key={value.id} value={value.id}>{value.id}.{value.model}</option>)
-                        }
-                    </select>
+                    <form onChange={selectF}>
+                        <select className={'select'}>
+                            {
+                                cars.map(value => <option key={value.id}
+                                                          value={value.id}>{value.id}.{value.model}</option>)
+                            }
+                        </select>
+                    </form>
                 </div>
                 <div className={'formUpdate'}>
-                    <form className={'formInput'}>
+                    <form className={'formInput'} onSubmit={carUpdate}>
                         <input type="text" name={'model'} value={value.model}
                                placeholder={'Edit car model'} onChange={onInputChange}
                         />
@@ -37,8 +47,8 @@ export default function UpdateCar({cars}) {
                         <input type="number" name={'year'}
                                placeholder={'Year'} value={value.year} onChange={onInputChange}
                         />
+                        <button className={'updateBtn'}>Update</button>
                     </form>
-                    <button className={'updateBtn'}>Update</button>
                 </div>
             </div>
 
