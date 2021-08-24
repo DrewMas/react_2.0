@@ -1,0 +1,9 @@
+.wrap{
+    margin-top: 25px;
+}
+
+.allPosts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

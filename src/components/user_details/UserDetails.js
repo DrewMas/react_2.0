@@ -1,7 +1,4 @@
-import {useEffect, useState} from "react";
-import {getUser} from "../../services/api.service";
 import './UserDetails.css'
-import {useParams} from "react-router";
 import {useHistory} from "react-router-dom";
 
 export default function UserDetails({location: {state}}) {
@@ -11,16 +8,6 @@ export default function UserDetails({location: {state}}) {
         address: {city, street, suite, zipcode, geo: {lat, lng}},
         company: {name: companyName, catchPhrase, bs}
     } = state;
-
-    // let {id, name, username, email, phone, website} = useParams('id');
-    //
-    // let [user, setUser] = useState([]);
-    // console.log(user);
-    //
-    //
-    // useEffect(()=>{
-    //     getUser(id).then(value => setUser({...value}));
-    // }, [id]);
 
     let history = useHistory();
 

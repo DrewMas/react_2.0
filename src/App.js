@@ -34,7 +34,7 @@ function App() {
                     <Route exact path={'/'}/>
                     <Route path={'/users'}
                            render={(props) => <Users props={props}/>}/>
-                    <Route path={'/posts'} render={() => <Posts/>}/>
+                    <Route path={'/posts'} component={Posts}/>
                 </Switch>
             </div>
         </Router>

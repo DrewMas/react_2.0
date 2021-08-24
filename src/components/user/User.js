@@ -17,8 +17,7 @@ export default function User({item}) {
 
     return (
         <div className={'singleUser'}>
-            {item.id}. {item.name} {<button onClick={details} className={'singleUserBtn'}>User Details</button>}
-            {/*<Link to={{pathname: '/users/' + item.id, state: item}}>User Details</Link>*/}
+            {item.id}. {item.name} <button onClick={details} className={'singleUserBtn'}>User Details</button>
         </div>
     );
 }
