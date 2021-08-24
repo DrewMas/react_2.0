@@ -10,7 +10,7 @@ export default function CarForm() {
 
     useEffect(() => {
         getCars().then(value => setCars([...value]))
-    }, [cars]);
+    }, [cars], );
 
 
     const save = (e) => {
