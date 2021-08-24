@@ -1,0 +1,14 @@
+.singleUser{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.singleUserBtn{
+    background: rgba(255, 240, 240, .5);
+    border-radius: 15px;
+    height: 30px;
+    width: 100px;
+}
