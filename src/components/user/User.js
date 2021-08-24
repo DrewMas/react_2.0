@@ -1,9 +1,5 @@
 import {
-    BrowserRouter as Router,
-    Link,
-    Route,
-    Switch, useHistory,
-    withRouter
+    useHistory,
 } from "react-router-dom";
 import './User.css'
 

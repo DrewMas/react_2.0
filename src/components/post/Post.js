@@ -1,9 +1,5 @@
 import {
-    BrowserRouter as Router,
-    Link,
-    Route,
-    Switch,
-    withRouter
+    Link
 } from "react-router-dom";
 import './Post.css'
 

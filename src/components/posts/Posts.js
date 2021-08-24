@@ -17,18 +17,17 @@ export default function Posts(props) {
 
     return (
         <div className={'wrap'}>
-            <div className={'allPosts'}>
-                {
-                    posts.map(value => <Post item={value} key={value.id}/>)
-                }
-            </div>
-            <div>
+            <div className={'postDetailsBox'}>
                 <Route path={`${url}/:id`}
                        render={(props) => <PostDetails {...props}/>
 
                        }/>
             </div>
-
+            <div className={'allPosts'}>
+                {
+                    posts.map(value => <Post item={value} key={value.id}/>)
+                }
+            </div>
         </div>
     );
 }

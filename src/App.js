@@ -3,8 +3,7 @@ import {
     BrowserRouter as Router,
     Link,
     Route,
-    Switch,
-    withRouter
+    Switch
 } from "react-router-dom";
 import Users from "./components/users/Users";
 import Posts from "./components/posts/Posts";

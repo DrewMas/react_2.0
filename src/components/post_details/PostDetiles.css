@@ -1,0 +1,10 @@
+.singlePost {
+    background: rgba(250,240,240, .5);
+    height: 50px;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    border: 2px dashed darkred;
+    margin: 20px 0;
+}
+

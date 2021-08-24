@@ -1,12 +1,12 @@
-import {useParams} from "react-router";
+import './PostDetiles.css'
 
-export default function PostDetails({location:{state}}) {
+export default function PostDetails({location: {state}}) {
 
-    console.log(state);
+    let {id, body} = state;
 
     return (
-        <div>
-            {state.body}
+        <div className={'singlePost'}>
+            <div>{id}. Post body: {body}</div>
         </div>
     );
 }

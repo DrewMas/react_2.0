@@ -1,8 +1,6 @@
 import {useEffect, useState} from "react";
 import {getUsers} from "../../services/api.service";
 import User from "../user/User";
-import {match, Route} from "react-router-dom";
-import UserDetails from "../user_details/UserDetails";
 import './Users.css'
 
 export default function Users({props: {match}}) {

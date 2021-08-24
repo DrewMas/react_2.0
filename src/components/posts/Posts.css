@@ -7,3 +7,9 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.postDetailsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
