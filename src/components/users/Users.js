@@ -22,10 +22,6 @@ export default function Users({props: {match}}) {
                     users.map(value => <User item={value} key={value.id}/>)
                 }
             </div>
-            <div>
-                <Route path={`${url}/:id`}
-                       render={(props) => <UserDetails {...props}/>}/>
-            </div>
         </div>
     );
 }
