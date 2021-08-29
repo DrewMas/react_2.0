@@ -1,0 +1,26 @@
+.wrapper {
+    width: 500px;
+    background: rgba(250, 240, 230, .3);
+    padding: 25px;
+}
+
+.title {
+    text-align: center;
+}
+
+.counter {
+    text-align: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+button {
+    background: white;
+    height: 30px;
+    width: 120px;
+    border-radius: 15px;
+}
