@@ -3,9 +3,8 @@ import {getUsers} from "../../services/api.service";
 import User from "../user/User";
 import './Users.css'
 
-export default function Users({props: {match}}) {
+export default function Users() {
 
-    let {url} = match;
     let [users, setUsers] = useState([]);
 
     useEffect(() => {
