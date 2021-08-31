@@ -5,8 +5,6 @@ export default function Counter() {
 
     let [{a, b, c}, dispatch] = useReducer(reducer, {a: 0, b: 0, c: 0});
 
-    console.log(a);
-
 
     return (
         <div>

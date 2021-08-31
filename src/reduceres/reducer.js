@@ -1,4 +1,5 @@
 const reducer = (state, action) => {
+
     switch (action.type) {
         case 'INC_A':
             return {...state, a: state.a + 1}
