@@ -1,25 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {addUser, fetchUsers} from "./services/user.api";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    let state = useSelector(state => state);
+    let {users} = state;
+
+    let dispatch = useDispatch();
+
+    useEffect(() => {
+        fetchUsers().then(value => dispatch({type: 'FETCH_USERS', payload: value})
+        )
+    }, []);
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        let name = e.target.name.value;
+        let user = {name}
+        console.log(name);
+        console.log(e);
+        addUser(user).then(value => {
+            console.log(value);
+            dispatch({type: 'PUSH_USER', payload: value})
+        });
+
+
+    }
+
+    return (
+        <div className="App">
+
+            <form onSubmit={onSubmit}>
+                <input type="text" name={'name'}/>
+                <button>add user</button>
+            </form>
+
+            {
+                users.map((value)=> <div key={value.id}>{value.id}.{value.name}</div>)
+            }
+        </div>
+    );
 }
 
 export default App;
