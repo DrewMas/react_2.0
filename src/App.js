@@ -2,6 +2,7 @@ import './App.css';
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {addUser, fetchUsers} from "./services/user.api";
+import {getUsers, pushUser} from "./redux/actions";
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
     let dispatch = useDispatch();
 
     useEffect(() => {
-        fetchUsers().then(value => dispatch({type: 'FETCH_USERS', payload: value})
+        fetchUsers().then(value => dispatch(getUsers(value))
         )
     }, []);
 
@@ -23,7 +24,8 @@ function App() {
         console.log(e);
         addUser(user).then(value => {
             console.log(value);
-            dispatch({type: 'PUSH_USER', payload: value})
+            dispatch(pushUser(value))
+
         });
 
 
